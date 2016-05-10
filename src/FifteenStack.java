@@ -1,37 +1,13 @@
 import jade.core.Agent;
 import jade.core.behaviours.Behaviour;
 import jade.core.behaviours.CyclicBehaviour;
+import jade.util.leap.Serializable;
 
 /**
  * Created by Thomas on 19-4-2016.
  */
-public class FifteenStack extends Agent{
+public class FifteenStack implements Serializable{
 
-    @Override
-    protected void setup() {
-        super.setup();
-
-        addBehaviour(new CyclicBehaviour() {
-            public void action() {
-                System.out.println("I'm still alive!");
-            }
-        });
-    }
-
-    @Override
-    protected void takeDown() {
-
-    }
-
-    @Override
-    public void addBehaviour(Behaviour b) {
-        super.addBehaviour(b);
-    }
-
-    @Override
-    public void removeBehaviour(Behaviour b) {
-        super.removeBehaviour(b);
-    }
 
     private static FifteenStack instance = null;
 
@@ -45,6 +21,7 @@ public class FifteenStack extends Agent{
         }
         return instance;
     }
+
 
     public int look(int stack) {
 
