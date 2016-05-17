@@ -2,14 +2,19 @@ import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.SimpleBehaviour;
+import jade.core.behaviours.TickerBehaviour;
 import jade.lang.acl.ACLMessage;
+import jade.lang.acl.UnreadableException;
+
+import java.io.IOException;
+import java.io.ObjectInputStream;
 
 
 /**
  * Created by Patrick on 19-4-2016.
  */
 public class Ferb extends Agent {
-
+    boolean inGame;
     @Override
     protected void setup() {
         super.setup();
@@ -17,20 +22,19 @@ public class Ferb extends Agent {
         introduction.setContent(Messages.INTRODUCTION);
         introduction.addReceiver(new AID("Phineas", false));
         send(introduction);
-        ACLMessage start_game_message = new ACLMessage(ACLMessage.PROPOSE);
-        start_game_message.setContent(Messages.START_GAME);
-        start_game_message.addReceiver(new AID("Phineas", false));
-        send(start_game_message);
+
         System.out.println(this.getAID());
-        addBehaviour(new SimpleBehaviour() {
-            public void action(){
 
-            }
-            public boolean done(){
-
-                return false;
+        addBehaviour(new TickerBehaviour(this, 1 * 1000) {
+            @Override
+            protected void onTick() {
+                ACLMessage start_game_message = new ACLMessage(ACLMessage.PROPOSE);
+                start_game_message.setContent(Messages.START_GAME);
+                start_game_message.addReceiver(new AID("Phineas", false));
+                send(start_game_message);
             }
         });
+
         addBehaviour(new CyclicBehaviour() {
             public void action() {
 
@@ -38,15 +42,29 @@ public class Ferb extends Agent {
                 if (msg != null) {
                     System.out.println(msg.getSender().getName() + " :  " + msg.getContent()+ " " + msg.getPerformative());
                     if(msg.getPerformative() == ACLMessage.INFORM){
-                        switch (msg.getContent()) {
-                            case Messages.TURN:{
-                                //doe tweede behavior
-                                ACLMessage reply = msg.createReply();
-                                reply.setContent("");
-                                reply.setPerformative(ACLMessage.INFORM);
+                        if(msg.getContent().contains("FifteenStack")){
+                            ACLMessage reply = msg.createReply();
+                            reply.setPerformative(ACLMessage.INFORM);
+                            try {
+
+                                FifteenStack game = (FifteenStack) msg.getContentObject();
+                                System.out.println(game.toString());
+                                if(game == null) {
+                                    return;
+                                }
+                                game.takeRandom();
+                                if (game.gameOver()) {
+                                    reply.setContent(Messages.GEFELICIFLAPSTAART);
+                                } else {
+                                    reply.setContent(Messages.TURN);
+                                    reply.setContentObject(game);
+                                }
                                 send(reply);
-                                break;
+                            } catch (Exception e) {
+                                e.printStackTrace();
                             }
+                        }
+                        switch (msg.getContent()) {
                             case "":
                                 ACLMessage reply = msg.createReply();
                                 reply.setContent("");
@@ -58,6 +76,7 @@ public class Ferb extends Agent {
                                 break;
                             }
                             case Messages.GEFELICIFLAPSTAART: {
+                                inGame = true; 
                                 ACLMessage reply21 = msg.createReply();
                                 reply21.setContent(Messages.SIGN_OUT);
                                 reply21.setPerformative(ACLMessage.INFORM);

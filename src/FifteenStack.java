@@ -11,11 +11,16 @@ public class FifteenStack implements Serializable{
 
     private static FifteenStack instance = null;
 
-    private static int firstStack = 3;
-    private static int secondStack = 5;
-    private static int thirdStack = 7;
+    private static int firstStack;
+    private static int secondStack;
+    private static int thirdStack;
+    private FifteenStack(){
 
+    }
     public static FifteenStack fromString(String s) {
+        firstStack = 3;
+        secondStack = 5;
+        thirdStack = 7;
         if(instance == null) {
             instance = new FifteenStack();
         }
@@ -35,7 +40,6 @@ public class FifteenStack implements Serializable{
     }
 
     public void take(int stack, int amount) {
-
         switch (stack) {
             case 1: firstStack -= amount; break;
             case 2: secondStack -= amount; break;
@@ -56,5 +60,13 @@ public class FifteenStack implements Serializable{
         return "First stack: " + Integer.toString(firstStack) +
                 "\n Second stack: " + Integer.toString(secondStack) +
                 "\n Third stack: " + Integer.toString(thirdStack);
+    }
+    public void takeRandom(){
+        int stack = 0;
+        while(look(stack) <= 0){
+            stack = (int) (Math.random() * 3) + 1;
+        }
+        int amount =  (int)(Math.random() * look(stack)) + 1;
+        take(stack, amount);
     }
 }
