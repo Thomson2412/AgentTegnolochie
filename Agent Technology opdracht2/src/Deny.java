@@ -11,19 +11,14 @@ import java.io.IOException;
  * Created by Patrick on 19-4-2016.
  */
 public class Deny extends Agent {
-    private boolean inGame = false;
-    private String intoducedAgent;
-
 
     @Override
     protected void setup() {
         super.setup();
         ACLMessage introduction = new ACLMessage(ACLMessage.REQUEST);
         introduction.setContent(Messages.ADD_ME);
-        introduction.addReceiver(new AID("TournamentMaster", false));
+        introduction.addReceiver(new AID("TournamentMaster", false)); // add myself to the contest
         send(introduction);
-
-        System.out.println(this.getAID());
 
         addBehaviour(new CyclicBehaviour() {
             public void action() {
@@ -31,21 +26,15 @@ public class Deny extends Agent {
 
                 if (msg != null) {
                     if(msg.getPerformative() == ACLMessage.INFORM) {
-                        if(msg.getContent().contains(Messages.ADDED)) {
+                        if(msg.getContent().contains(Messages.ADDED)) { //this agent has been added to the contest
                             System.out.println("Yes ik ben toegevoegd");
                             //yes ik ben toegevoegd
                         }
-                        else if(msg.getContent().contains(Messages.YOUR_TURN)){
+                        else if(msg.getContent().contains(Messages.YOUR_TURN)){ //it's my turn to play
                             ACLMessage reply = msg.createReply();
                             reply.setPerformative(ACLMessage.INFORM);
-                            reply.setContent(Messages.DENY);
+                            reply.setContent(Messages.DENY);                    //always deny
                             send(reply);
-                        }
-                        if(msg.getContent().contains(Messages.OPPONENT_CONFESS)){
-                       //     System.out.println("ik ben " + getName() + " en mijn tegenstander deed confess ");
-                        }
-                        if(msg.getContent().contains(Messages.OPPONENT_DENY)){
-                    //        System.out.println("ik ben " + getName() + " en mijn tegenstander deed Deny");
                         }
                     }
                 }

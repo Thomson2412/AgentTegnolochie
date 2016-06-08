@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09ebd2fb-d685-4abd-8512-8694567fcaf9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Participant.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PrisonersDilemmaTournamentAgent.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/FifteenStack.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Ferb.java" afterPath="$PROJECT_DIR$/src/Deny.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Phineas.java" afterPath="$PROJECT_DIR$/src/Confess.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APDescription.txt" afterPath="$PROJECT_DIR$/APDescription.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MTPs-Main-Container.txt" afterPath="$PROJECT_DIR$/MTPs-Main-Container.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Messages.java" afterPath="$PROJECT_DIR$/src/Messages.java" />
-    </list>
+    <list default="true" id="09ebd2fb-d685-4abd-8512-8694567fcaf9" name="Default" comment="" />
     <ignored path="AgentTegnolochie.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -35,8 +25,28 @@
       <file leaf-file-name="Deny.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Deny.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+            <state relative-caret-position="442">
+              <caret line="35" column="93" selection-start-line="35" selection-start-column="93" selection-end-line="35" selection-end-column="93" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Random.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Random.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="34" column="107" selection-start-line="34" selection-start-column="107" selection-end-line="34" selection-end-column="107" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TitForTat.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TitForTat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="34" column="83" selection-start-line="34" selection-start-column="83" selection-end-line="34" selection-end-column="119" />
               <folding />
             </state>
           </provider>
@@ -45,8 +55,8 @@
       <file leaf-file-name="Confess.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Confess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+            <state relative-caret-position="493">
+              <caret line="35" column="96" selection-start-line="35" selection-start-column="96" selection-end-line="35" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -55,8 +65,8 @@
       <file leaf-file-name="PrisonersDilemmaTournamentAgent.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PrisonersDilemmaTournamentAgent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="128" column="35" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
+            <state relative-caret-position="306">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="49" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,7 +85,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -94,10 +104,12 @@
         <option value="$PROJECT_DIR$/src/Ferb.java" />
         <option value="$PROJECT_DIR$/src/Phineas.java" />
         <option value="$PROJECT_DIR$/src/Messages.java" />
-        <option value="$PROJECT_DIR$/src/Confess.java" />
-        <option value="$PROJECT_DIR$/src/Deny.java" />
         <option value="$PROJECT_DIR$/src/Participant.java" />
         <option value="$PROJECT_DIR$/src/PrisonersDilemmaTournamentAgent.java" />
+        <option value="$PROJECT_DIR$/src/Confess.java" />
+        <option value="$PROJECT_DIR$/src/Deny.java" />
+        <option value="$PROJECT_DIR$/src/Random.java" />
+        <option value="$PROJECT_DIR$/src/TitForTat.java" />
       </list>
     </option>
   </component>
@@ -114,7 +126,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -136,27 +148,27 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AgentTegnolochie" />
+              <option name="myItemId" value="Agent Technology opdracht2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AgentTegnolochie" />
+              <option name="myItemId" value="Agent Technology opdracht2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AgentTegnolochie" />
+              <option name="myItemId" value="Agent Technology opdracht2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AgentTegnolochie" />
+              <option name="myItemId" value="Agent Technology opdracht2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AgentTegnolochie" />
+              <option name="myItemId" value="Agent Technology opdracht2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -164,11 +176,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Agent Technology opdracht2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Agent Technology opdracht2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -176,7 +202,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.15818687" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
@@ -427,7 +453,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="jade.Boot" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="-gui -agents &quot;TournamentMaster:PrisonersDilemmaTournamentAgent();confess1:Confess(); deny1:Deny(); confess2:Confess(); deny2:Deny()&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-gui -agents &quot;TournamentMaster:PrisonersDilemmaTournamentAgent();confess:Confess(); deny:Deny(); Random:Random(); TitForTat:Deny()&quot;" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -459,7 +485,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -470,13 +496,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15434083" sideWeight="0.5063966" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45551983" sideWeight="0.4936034" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27759916" sideWeight="0.4936034" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12686567" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15511727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39764202" sideWeight="0.49573562" order="3" side_tool="false" content_ui="tabs" />
@@ -485,7 +512,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -530,6 +556,58 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Deny.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Confess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PrisonersDilemmaTournamentAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Deny.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Confess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PrisonersDilemmaTournamentAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Deny.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -690,23 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="381" column="29" selection-start-line="381" selection-start-column="29" selection-end-line="381" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Confess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Deny.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -733,10 +794,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/AgentTegnolochie/Deny.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#1624#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Deny.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="35" column="93" selection-start-line="35" selection-start-column="93" selection-end-line="35" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TitForTat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="34" column="83" selection-start-line="34" selection-start-column="83" selection-end-line="34" selection-end-column="119" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="34" column="107" selection-start-line="34" selection-start-column="107" selection-end-line="34" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Confess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="35" column="96" selection-start-line="35" selection-start-column="96" selection-end-line="35" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/PrisonersDilemmaTournamentAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="128" column="35" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
+        <state relative-caret-position="306">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="49" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

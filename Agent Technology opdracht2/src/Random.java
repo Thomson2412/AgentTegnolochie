@@ -1,16 +1,14 @@
 import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
-import jade.core.behaviours.TickerBehaviour;
 import jade.lang.acl.ACLMessage;
 
-import java.io.IOException;
-
 //confesstival
+
 /**
  * Created by Patrick on 19-4-2016.
  */
-public class Confess extends Agent {
+public class Random extends Agent {
 
     @Override
     protected void setup() {
@@ -33,7 +31,13 @@ public class Confess extends Agent {
                         else if(msg.getContent().contains(Messages.YOUR_TURN)){  //it's my turn to play
                             ACLMessage reply = msg.createReply();
                             reply.setPerformative(ACLMessage.INFORM);
-                            reply.setContent(Messages.CONFESS);                 //always confess
+                            java.util.Random random = new java.util.Random();
+                            if(random.nextInt(2) == 1) {                        //do random deny or confess
+                                reply.setContent(Messages.CONFESS);
+                            }
+                            else{
+                                reply.setContent(Messages.DENY);
+                            }
                             send(reply);
                         }
                     }

@@ -1,20 +1,20 @@
 import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
-import jade.core.behaviours.TickerBehaviour;
 import jade.lang.acl.ACLMessage;
-import jade.util.leap.HashMap;
-import jade.util.leap.Serializable;
-import java.*;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.Enumeration;
-import java.util.List;
+
 public class PrisonersDilemmaTournamentAgent extends Agent {
 
+    //the list with candidates for the contest
     private ArrayList<Participant> agentCandidatateList = new ArrayList<>();
+    //integer with current round number;
     private int round = 0;
+
+    /**
+     * add a single agent to the candidateList
+     * @param name the name of the agent
+     */
     public void addCandidateAgent(String name){
         agentCandidatateList.add(new Participant(name));
         if(agentCandidatateList.size() == 4) {
@@ -26,27 +26,25 @@ public class PrisonersDilemmaTournamentAgent extends Agent {
     @Override
     protected void setup() {
         super.setup();
-        System.out.println(this.getAID());
 
         addBehaviour(new CyclicBehaviour() {
             public void action() {
                 ACLMessage msg = receive();
                 if (msg != null) {
-                  //  System.out.println(msg.getSender().getName() + " :  " + msg.getContent() + " " + msg.getPerformative());
                     if (msg.getPerformative() == ACLMessage.REQUEST) {
-                        if (msg.getContent().contains(Messages.ADD_ME)) {
+                        if (msg.getContent().contains(Messages.ADD_ME)) {   // An agent wants to be added
                             ACLMessage reply = msg.createReply();
                             reply.setPerformative(ACLMessage.INFORM);
                             addCandidateAgent(msg.getSender().getName());
                             reply.setContent(Messages.ADDED);
-                            send(reply);
+                            send(reply);                                    //send a reply: you have been added
                         }
                     }
                     if(msg.getPerformative() == ACLMessage.INFORM){
-                        if(msg.getContent().contains(Messages.CONFESS)){
+                        if(msg.getContent().contains(Messages.CONFESS)){    //an agent wants to confess
                             confess(msg.getSender().getName());
                         }
-                        else if(msg.getContent().contains(Messages.DENY)){
+                        else if(msg.getContent().contains(Messages.DENY)){  //an agent wants to deny
                             deny(msg.getSender().getName());
                         }
                     }
@@ -54,6 +52,10 @@ public class PrisonersDilemmaTournamentAgent extends Agent {
             }
         });
     }
+
+    /**
+     * Change the opponents at round 0 3 and 6. Every agent plays 3 games against every other agent. A total of 9 games
+     */
     public void setOpponents(){
         if(round == 0) {
             agentCandidatateList.get(0).setOpponent(agentCandidatateList.get(1));
@@ -74,8 +76,11 @@ public class PrisonersDilemmaTournamentAgent extends Agent {
             agentCandidatateList.get(2).setOpponent(agentCandidatateList.get(1));
         }
     }
+
+    /**
+     * start a new round by sending all the agents it's their turn
+     */
     public void startRound(){
-        System.out.println("start ronde " + round);
         for(Participant p : agentCandidatateList){
             ACLMessage yourTurn = new ACLMessage(ACLMessage.INFORM);
             yourTurn.setContent(Messages.YOUR_TURN);
@@ -85,6 +90,10 @@ public class PrisonersDilemmaTournamentAgent extends Agent {
         //send message to all agents.
 
     }
+    /**
+     * set the choice of an agent to deny
+     * @param agentName the name of the agent
+     */
     public void confess(String agentName){
         for(Participant p : agentCandidatateList ){
             if(p.name.equals(agentName)){
@@ -95,14 +104,11 @@ public class PrisonersDilemmaTournamentAgent extends Agent {
             finishRound();
         };
     }
-    public boolean allMadeChoice(){
-        for(Participant p : agentCandidatateList){
-            if(p.getChoice() == null){
-                return false;
-            }
-        }
-        return true;
-    }
+
+    /**
+     * set the choice of an agent to deny
+     * @param agentName the name of the agent
+     */
     public void deny(String agentName){
         for(Participant p : agentCandidatateList ){
             if(p.name.equals(agentName)){
@@ -113,8 +119,25 @@ public class PrisonersDilemmaTournamentAgent extends Agent {
             finishRound();
         };
     }
+
+    /**
+     * check if all agents made a choice yet
+     * @return boolean: true if all agents made a choice
+     */
+    public boolean allMadeChoice(){
+        for(Participant p : agentCandidatateList){
+            if(p.getChoice() == null){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * finish the current round by calculating the utility of every agent and let the agents know what utility they got this round
+     * at the end the next round will be started
+     */
     public void finishRound(){
-        System.out.println("finish ronde");
         for(Participant p: agentCandidatateList){
             System.out.println(p.name.split("@")[0] + " heeft " + getUtility(p.getChoice(), p.getOpponent().getChoice()) + " punten erbij met " + p.getChoice() + " tegenstander: " + p.getOpponent().getChoice());
             p.addUtility( getUtility(p.getChoice(), p.getOpponent().getChoice()));
@@ -129,14 +152,14 @@ public class PrisonersDilemmaTournamentAgent extends Agent {
             send(choiceOfOpponent);
         }
         for(Participant p: agentCandidatateList){
-            p.setChoice(null);
+            p.setChoice(null);                  //reset all the choices of the agents.
         }
-        if(round % 3 == 0){
+        if(round % 3 == 0){                     // if round = 3, 6 or 9, new opponents will be chosen.
             setOpponents();
             startRound();
         }
-        else if(round >= 9){
-            System.out.println("FINISHED");
+        else if(round >= 9){                    //if round = 9, finish the tournament
+            System.out.print("\n\n\n");
             for(Participant p : agentCandidatateList){
                 System.out.println(p.name.split("@")[0] + " heeft " + p.getUtility() + " punten gehaald");
             }
@@ -144,10 +167,15 @@ public class PrisonersDilemmaTournamentAgent extends Agent {
         else{
             startRound();
         }
-        System.out.println("round++");
         round++;
     }
 
+    /**
+     *
+     * @param choiceA the choice of agent A
+     * @param choiceB the choice of agent B
+     * @return the utility for agentA
+     */
     public int getUtility(String choiceA, String choiceB){
         if(choiceA == Messages.CONFESS && choiceB == Messages.CONFESS){
             return 3;
